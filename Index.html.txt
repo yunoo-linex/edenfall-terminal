@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>corrupted_file_xi.edenfall</title>
+  <style>
+    body {
+      background-color: #0c0c0c;
+      color: #00ffcc;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2rem;
+      font-size: 1rem;
+      white-space: pre-wrap;
+      overflow: hidden;
+    }
+    .redacted {
+      background-color: #0c0c0c;
+      color: #0c0c0c;
+      border-bottom: 1px dotted #444;
+    }
+    .blinker {
+      animation: blink 1s step-start infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .btn {
+      background-color: #111;
+      color: #00ffcc;
+      border: 1px solid #00ffcc;
+      padding: 0.5rem 1rem;
+      margin-right: 1rem;
+      font-family: 'Courier New', Courier, monospace;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+      background-color: #00ffcc;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio><pre id="terminal"></pre><div class="button-group">
+  <button class="btn">Accept Transmission</button>
+  <button class="btn">Deny and Exit</button>
+</div><script>
+  const lines = [
+    "[ ❒ corrupted_file_xi.edenfall ]",
+    "⧖ ⚠️ ⚙️ ☁️ ✶ (loading...)\n",
+    "user: @wxdxpx.linex",
+    "alias: [█. █.] wan-dering poet. . .",
+    "name: hikaru wan",
+    "> data file converted /",
+    "        > memory saved",
+    "        > memory recovered",
+    "        > welcome, hikaru.",
+    "\n/ file loading . . .",
+    "        > status determined : [ ▒▒▒▒▒ ]",
+    "\n- directory -",
+    "▸ edenfall archive",
+    "  // poetry in psalms and ruin",
+    "  // dream-logs, soft exiles, grief-bled prose",
+    "▸ meta log",
+    "  // author static",
+    "  // notes on memory, [ ██████ ], fracture",
+    "> log out",
+    "> data terminated",
+    "> this file should be corrupted soon in 3... 2... 1...",
+    "\n   / request denied.",
+    "\n[ \\Rederacted_ ]",
+    "   welcome [ ▓▓▓▓▓▓▓ ],",
+    "   this account is not classified.",
+    "   check at your own pace.",
+    "   files containing half-truths have been identified under the account’s patch.",
+    "   don't expect answers.",
+    "   if you encounter corrupted files, report back to facility.",
+    "- [ █ █ █ ] : [ ███████ ] -"
+  ];
+
+  const terminal = document.getElementById('terminal');
+  let i = 0;
+
+  function typeLine() {
+    if (i < lines.length) {
+      terminal.textContent += lines[i] + '\n';
+      i++;
+      setTimeout(typeLine, 120);
+    } else {
+      terminal.innerHTML += '<span class="blinker">█</span>';
+    }
+  }
+
+  typeLine();
+</script></body>
+</html>
